@@ -29,12 +29,14 @@
 				</form>
 			</div>
 			<div class="row "> 
-				<h3>{{ city }}</h3>
-				<p>Country Code: </p>
-				<p>Cordinate: </p>
-				<p>Temp: </p>
-				<p>Pressure: </p>
-				<p>Humidity: </p>
+				{% if data.country_code %}
+				<h3>{{ data.city }}</h3>
+				<p>Country Code: {{ data.country_code }}</p>
+				<p>Cordinate: {{ data.cordinates }}</p>
+				<p>Temp: {{ data.temp }}</p>
+				<p>Pressure: {{ data.pressure }}</p>
+				<p>Humidity: {{ data.humidity }}</p>
+				{% endif %}
 			</div>
 		</div>
 	</div>
